@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-NotTinder.MigrationService-eb3bbfbe-1384-4b68-afa2-38b1aa221e7d</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.2.2"/>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CoinRateApi\CoinRateApi.csproj"/>
+        <ProjectReference Include="..\NotTinderApi.ServiceDefaults\NotTinderApi.ServiceDefaults.csproj"/>
+        <ProjectReference Include="..\NotTinderAuthApi\AuthApi.csproj"/>
+        <ProjectReference Include="..\StartupsApi\StartupsApi.csproj"/>
+        <ProjectReference Include="..\TransactionsApi\TransactionsApi.csproj"/>
+        <ProjectReference Include="..\UsersApi\UsersApi.csproj"/>
+    </ItemGroup>
+</Project>

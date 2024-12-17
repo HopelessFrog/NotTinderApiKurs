@@ -1,0 +1,6 @@
+@CoinRateApi_HostAddress = http://localhost:5139
+
+GET {{CoinRateApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

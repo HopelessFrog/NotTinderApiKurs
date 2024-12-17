@@ -1,0 +1,51 @@
+{
+  "projectPath": ".",
+  "outputPath": "aspirate-output",
+  "containerImageTags": [
+    "latest"
+  ],
+  "containerBuilder": "docker",
+  "outputFormat": "compose",
+  "privateRegistryEmail": "aspir8@aka.ms",
+  "secrets": {
+    "salt": "/sklsC5kZF3chU6f",
+    "hash": "AahhrkIyolyUT/bHwPp66jQPBabs07e\u002BYt9pgbzzGk4=",
+    "secrets": {
+      "rabbitmq-password": {
+        "value": "/sklsC5kZF3chU6f/8vsi26GyA68aCPJ\u002BTRGGYUvy5\u002BZ0ocOKbWvIHC1F/32GmOYzO8="
+      },
+      "sql-password": {
+        "value": "/sklsC5kZF3chU6f1wqujuCyyrCldBQBuZ9rBqIJ1evBjc8="
+      },
+      "minio-password": {
+        "value": "/sklsC5kZF3chU6f1wqujuCyyrCldBQBuZ9rBqIJ1evBjc8="
+      },
+      "postgres": {
+        "POSTGRES_PASSWORD": "/sklsC5kZF3chU6f1wqujuCyyrCldBQBuZ9rBqIJ1evBjc8="
+      },
+      "postgresdb": {},
+      "rediscache": {},
+      "rabbitmq": {},
+      "migrationservice": {
+        "ConnectionStrings__postgresdb": "/sklsC5kZF3chU6fVXMPo53su0BoOei7KGwkBIYJzq3MzZAYK\u002BroJkjMJP7QVwmRlIRmbGeEeIuI21Hq45s6hnEwyhnTvPEEeo8/lRSB6c0w2hm2OmLaDXh7b\u002BcBtqSM7uhznCsWTOgybg=="
+      },
+      "nottinderapi": {
+        "ConnectionStrings__rediscache": "/sklsC5kZF3chU6fTxbWjL1bKCstu\u002BA8m\u002BKhtbwD2bCC3p4IN\u002BigdQjATQ=="
+      },
+      "authapi": {
+        "ConnectionStrings__postgresdb": "/sklsC5kZF3chU6fVXMPo53su0BoOei7KGwkBIYJzq3MzZAYK\u002BroJkjMJP7QVwmRlIRmbGeEeIuI21Hq45s6hnEwyhnTvPEEeo8/lRSB6c0w2hm2OmLaDXh7b\u002BcBtqSM7uhznCsWTOgybg==",
+        "ConnectionStrings__rabbitmq": "/sklsC5kZF3chU6fuSrj3MTa978cvaSP2YpmJq8LzKnLktAMKujpNwG8PefkS1vQyMtnYlG8X5qK7gXY7ooHtXc22h7J88wUM8l\u002BzVQ="
+      },
+      "gatewayapi": {},
+      "coinrateapi": {
+        "ConnectionStrings__postgresdb": "/sklsC5kZF3chU6fVXMPo53su0BoOei7KGwkBIYJzq3MzZAYK\u002BroJkjMJP7QVwmRlIRmbGeEeIuI21Hq45s6hnEwyhnTvPEEeo8/lRSB6c0w2hm2OmLaDXh7b\u002BcBtqSM7uhznCsWTOgybg=="
+      },
+      "usersapi": {
+        "ConnectionStrings__postgresdb": "/sklsC5kZF3chU6fVXMPo53su0BoOei7KGwkBIYJzq3MzZAYK\u002BroJkjMJP7QVwmRlIRmbGeEeIuI21Hq45s6hnEwyhnTvPEEeo8/lRSB6c0w2hm2OmLaDXh7b\u002BcBtqSM7uhznCsWTOgybg==",
+        "ConnectionStrings__rabbitmq": "/sklsC5kZF3chU6fuSrj3MTa978cvaSP2YpmJq8LzKnLktAMKujpNwG8PefkS1vQyMtnYlG8X5qK7gXY7ooHtXc22h7J88wUM8l\u002BzVQ="
+      },
+      "startupsapi": {}
+    }
+  },
+  "processAllComponents": true
+}

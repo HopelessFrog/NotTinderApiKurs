@@ -1,0 +1,342 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/Login",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7022
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Login/Login"
+    },
+    {
+      "UpstreamPathTemplate": "/api/LogOut",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7022
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Login/LogOut",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/RefreshToken",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7022
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Token"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Register",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7226
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Register"
+    },
+    {
+      "UpstreamPathTemplate": "/api/User/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7226
+        }
+      ],
+      "DownstreamPathTemplate": "/api/User/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/ActualCoinRate",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "https",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7061
+        }
+      ],
+      "Key": "CoinRate",
+      "DownstreamPathTemplate": "/api/CoinRate/ActualCoinRate"
+    },
+    {
+      "UpstreamPathTemplate": "/api/CoinRates",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "https",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7061
+        }
+      ],
+      "DownstreamPathTemplate": "/api/CoinRate/CoinsRates"
+    },
+    {
+      "UpstreamPathTemplate": "/api/StartupsIds",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "AddHeadersToRequest": {
+        "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/hash] > value > |"
+      },
+      "DownstreamPathTemplate": "/api/Startups/StartupsIds"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Startups",
+      "UpstreamHttpMethod": [
+        "Post",
+        "Put",
+        "Delete"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "AddHeadersToRequest": {
+        "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/hash] > value > |"
+      },
+      "DownstreamPathTemplate": "/api/Startups"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Startups/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Startups/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/MyStartups",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "AddHeadersToRequest": {
+        "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/hash] > value > |"
+      },
+      "DownstreamPathTemplate": "/api/Startups/MyStartups"
+    },
+    {
+      "UpstreamPathTemplate": "/api/TopStartups",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Startups/TopStartups"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Donated/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7185
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Startups/Donated/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Balance",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7226
+        }
+      ],
+      "AddHeadersToRequest": {
+        "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/hash] > value > |"
+      },
+      "DownstreamPathTemplate": "/api/Balance"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Balance/TopUp/{everything}",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7226
+        }
+      ],
+      "AddHeadersToRequest": {
+        "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/hash] > value > |"
+      },
+      "DownstreamPathTemplate": "/api/Balance/TopUp/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Donate",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7290
+        }
+      ],
+      "AddHeadersToRequest": {
+        "userId": "Claims[http://schemas.xmlsoap.org/ws/2005/05/identity/claims/hash] > value > |"
+      },
+      "DownstreamPathTemplate": "/api/Transaction"
+    },
+    {
+      "UpstreamPathTemplate": "/api/UserTransactions/{everything}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7290
+        }
+      ],
+      "RouteClaimsRequirement": {
+        "http$//schemas.microsoft.com/ws/2008/06/identity/claims/role": "Admin"
+      },
+      "DownstreamPathTemplate": "/api/Transaction/UserTransactions/{everything}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/AllUsers",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7226
+        }
+      ],
+      "RouteClaimsRequirement": {
+        "http$//schemas.microsoft.com/ws/2008/06/identity/claims/role": "Admin"
+      },
+      "DownstreamPathTemplate": "/api/User/All"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:6666"
+  }
+}
