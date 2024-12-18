@@ -32,8 +32,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinioClient", "MinioClient\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionsApi", "TransactionsApi\TransactionsApi.csproj", "{726D6F2C-7288-4C38-A659-298B90607A64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomExceptions", "CustomExceptions\CustomExceptions.csproj", "{240378F0-C9F3-4328-9EA7-933CEAB96B67}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotTinderApi.SeedService", "NotTinderApi.SeedService\NotTinderApi.SeedService.csproj", "{33AB4B44-263A-4678-B8D1-E8738506CE8E}"
 EndProject
 Global
@@ -94,10 +92,6 @@ Global
 		{726D6F2C-7288-4C38-A659-298B90607A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{726D6F2C-7288-4C38-A659-298B90607A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{726D6F2C-7288-4C38-A659-298B90607A64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{240378F0-C9F3-4328-9EA7-933CEAB96B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{240378F0-C9F3-4328-9EA7-933CEAB96B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{240378F0-C9F3-4328-9EA7-933CEAB96B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{240378F0-C9F3-4328-9EA7-933CEAB96B67}.Release|Any CPU.Build.0 = Release|Any CPU
 		{33AB4B44-263A-4678-B8D1-E8738506CE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33AB4B44-263A-4678-B8D1-E8738506CE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33AB4B44-263A-4678-B8D1-E8738506CE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -32,7 +32,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\CustomExceptions\CustomExceptions.csproj"/>
         <ProjectReference Include="..\NotTinderApi.ServiceDefaults\NotTinderApi.ServiceDefaults.csproj"/>
         <ProjectReference Include="..\SharedMessages\SharedMessages.csproj"/>
         <ProjectReference Include="..\TokenShared\TokenShared.csproj"/>
