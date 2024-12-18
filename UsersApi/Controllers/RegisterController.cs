@@ -22,15 +22,15 @@ public class RegisterController : ControllerBase
         try
         {
             await _registerService.Register(request);
-            return Ok(new { StatusMessage = "Acc created" });
+            return Ok();
         }
         catch (ArgumentException ex)
         {
-            return Ok(new { StatusMessage = "User already exists" });
+            return Ok("User already exists" );
         }
         catch (Exception e)
         {
-            return BadRequest(new { StatusMessage = "Happen something bad, try again later" });
+            return BadRequest("Happen something bad, try again later");
         }
     }
 }
